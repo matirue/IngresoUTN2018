@@ -2,12 +2,30 @@ function Mostrar()
 {
 
 	var contador=0;
+	var numero;
+	var maximo;
+	var minimo;
+
 	// declarar variables
 	
 	var respuesta='si';
 
-	while(respuesta!='no')
+	do
 	{
+		numero=parseInt(promt("ingrese un Numero: "));
+		contador++;
+		if(contador==1)
+		{
+			max=numero;
+			min=numero;
+		}
+		if(num>max)
+		{
+			max=num;
+			}
+			if(num<min)
+
+			//terminar........
 		
 	
 	}
