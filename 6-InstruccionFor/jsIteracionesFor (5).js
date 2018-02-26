@@ -1,12 +1,17 @@
 function Mostrar()
 {
-    for(var i=0; i=9 ; i++)
-{
-    if(i==10000000)
+    for( ; ; )
     {
-        break;
+        var num=parseInt(prompt("Ingrese un numero: "));
+
+        if(num==9)
+        {
+            break;
+        }
     }
-}
+
+    alert("Ingresaste el 9!!");
+
 
 
 

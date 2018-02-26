@@ -1,14 +1,12 @@
 function Mostrar()
 {
-for(var i=0;    ; i++)
-{
-    if(i==10000000)
+    for(var i=0;  ;i++)
     {
+        if (i==1000000)
+        {
         break;
+        }
     }
-}
 
-alert("LISTO!!!!");
-
-
+    alert("asdasd ");
 }//FIN DE LA FUNCIÓN
