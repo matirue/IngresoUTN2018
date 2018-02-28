@@ -4,48 +4,43 @@ B.	Ingresar tres precios de productos y mostrar el promedio de los mismos.
 C.	ingresar tres precios de productos  y mostrar precio final (más IVA 21%).
 */
 function Sumar () 
-{
-	var precioUno=parseFloat(document.getElementById("PrecioUno").value);
-    var precioDos=parseFloat(document.getElementById("PrecioDos").value);
-    var precioTres=parseFloat(document.getElementById("PrecioTres").value);
-    var total;
+{ var precio1=parseFloat(document.getElementById("PrecioUno").value);
+  var precio2=parseFloat(document.getElementById("PrecioDos").value);
+  var precio3=parseFloat(document.getElementById("PrecioTres").value);
+  var suma;
 
-    total = precioUno + precioDos + precioTres;
+  suma=precio1+precio2+precio3;
 
-    alert("Su total es de $ " +total);
-
-
-    
+  alert("La suma es de $" +suma);
+	
 }
 function Promedio () 
-{   var precioUno=parseFloat(document.getElementById("PrecioUno").value);
-    var precioDos=parseFloat(document.getElementById("PrecioDos").value);
-    var precioTres=parseFloat(document.getElementById("PrecioTres").value);
-    var total;
-    var prom;
+{ var precio1=parseFloat(document.getElementById("PrecioUno").value);
+  var precio2=parseFloat(document.getElementById("PrecioDos").value);
+  var precio3=parseFloat(document.getElementById("PrecioTres").value);
+  var suma;
+  var prom;
 
-    total= precioUno + precioDos  +precioTres;
-    prom= total/3;
+  suma=precio1+precio2+precio3;
+  prom=suma/3;
 
-    alert("El promedio es de $ " +prom.toFixed(2));
-
-
-	
+  alert("El promedio es de $" +prom.toFixed(2));
+  
+  
+  
 }
 function PrecioFinal () 
 {
-    var precioUno=parseFloat(document.getElementById("PrecioUno").value);
-    var precioDos=parseFloat(document.getElementById("PrecioDos").value);
-    var precioTres=parseFloat(document.getElementById("PrecioTres").value);
-    var total;
-    var precIva;
-    var impuesto;
+  var precio1=parseFloat(document.getElementById("PrecioUno").value);
+  var precio2=parseFloat(document.getElementById("PrecioDos").value);
+  var precio3=parseFloat(document.getElementById("PrecioTres").value);
+  var suma;
+  var precioIva;
+  var impuesto;
 
-    total= precioUno + precioDos  +precioTres;
-    impuesto=total*.21;
-    precIva=total+impuesto;
+  suma=precio1+precio2+precio3;
+  impuesto=suma*.21;
+  precioIva=suma+impuesto;
 
-    alert("El precio final es de $ " +precIva.toFixed(2));
-
-	
+  alert("El precio final es de $" +precioIva.toFixed(2));
 }

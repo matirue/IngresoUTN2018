@@ -6,43 +6,45 @@ C.	Para hacer un contrapiso de 1m x 1m se necesitan 2 bolsas de cemento y 3 de c
 
 function Rectangulo () 
 {
-    var largoTer=parseFloat(document.getElementById("Largo").value);
-    var anchoTer=parseFloat(document.getElementById("Ancho").value);
-    var total1;
+    var largo=parseFloat(document.getElementById("Largo").value);
+    var ancho=parseFloat(document.getElementById("Ancho").value);
+    var perimetro;
     var alambre;
 
-    total1=(largoTer*2)+(anchoTer*2);
-    alambre=total1*3;
-    
-    alert("se necesitan " +alambre+ " metros de alambre.");
+    perimetro=2*largo+ancho*2;
+    alambre=perimetro*3;
+
+    alert("Se necesitan " +alambre+ " metros de alambre.");
 
 }
 function Circulo () 
 {
-	var radioTer=parseFloat(document.getElementById("Radio").value);
+    var radio=parseFloat(document.getElementById("Radio").value);
+    var perimetro;
     var alambre;
-    var radioTot;
 
-    radioTot= 2 * radioTer * Math.PI;
-    alambre=radioTot*3;
+    perimetro=2*Math.PI*radio;
+    alambre=perimetro*3;
 
-    
-    alert("se necesitan " +alambre.toFixed(2)+ " metros de alambre.");
+    alert("Se necesitan " +alambre.toFixed(2)+ " metros de alambre.");
+
+	
 }
 function Materiales () 
 {
-    
-    var largoTer=parseFloat(document.getElementById("Largo").value);
-    var anchoTer=parseFloat(document.getElementById("Ancho").value);
+    var largo=parseFloat(document.getElementById("Largo").value);
+    var ancho=parseFloat(document.getElementById("Ancho").value);
+    var cem;
     var cal;
-    var cemento;
-    var superf;
+    var sup;
 
-    superf=largoTer*anchoTer;
-    cal=superf*3;
-    cemento=superf*2;
+    sup=largo*ancho;
+    cem=sup*2;
+    cal=sup*3;
 
-    alert("Para el terreno se necesitan " +cal+ " bolsas de cal y " +cemento+ " bolsas de cemento.");
+    alert("Se necesitan " +cem+ " bolsas de cemento y " +cal+ " bolsas de cal.");
 
+
+    
 	
 }

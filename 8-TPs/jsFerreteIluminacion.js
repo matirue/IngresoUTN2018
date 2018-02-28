@@ -10,25 +10,76 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
-    var lamp=parseInt(document.getElementById("Cantidad").value);
-    var marca=document.getElementById("Marca").value;
-    const precio=35;
-    var desc;
-    var precioConDesc;
+     var lamp=parseInt(document.getElementById("Cantidad").value);
+     var marca=document.getElementById("Marca").value;
+     var descuento;
+     var precioConDesc;
+     const precio=35;   //como el precio no se modifica lo tomo como una constante
+     var impFinal;
+     var IIBB
 
-    switch(lamp)
-    {
-        case 5:
-        if(marca==ArgentinaLuz)
-        {
-          desc=precio*.40;         
-        }
-        else
-        {
-           desc=precio*.30;
-        }
-        case 6:
-        desc
-    }
- 	
+     switch(lamp)
+     {
+         case 1:
+         case 2:
+         descuento=0;
+         break;
+
+         case 3:
+             if(marca=="ArgentinaLuz")
+             {
+                 descuento=precio*.15;
+             }
+             else if (marca=="FelipeLamparas")
+             {
+                 descuento=precio*.10;
+             }
+             else
+             {
+                 descuento=precio*.05;
+             }
+             break;
+
+         case 4:
+             if(marca=="ArgentinaLuz" || marca=="FelipeLamparas")   
+             {
+                 descuento=precio*.25;
+             } 
+             else
+             {
+                 descuento=precio*.20;
+             }
+             break;
+
+         case 5:
+             if(marca=="ArgentinaLuz")
+             {
+                 descuento=precio*.40;
+             }    
+             else
+             {
+                 descuento=precio*.30;
+             }
+             break;
+
+         default:
+         descuento=precio*.50;
+         break;   
+     }
+
+     precioConDesc=precio-descuento;
+
+     document.getElementById("precioDescuento").value=precioConDesc;
+     
+     impFinal=lamp*precioConDesc;
+
+     if(impFinal>120)
+     {
+         IIBB=impFinal*.10;
+         alert("Importe final es de $" +impFinal+ " de los cuales $" +IIBB+ " es impuesto Ingreso Bruto");
+     }
+     else
+     {
+           alert("Importe final es de $" +impFinal);
+     }
 }
