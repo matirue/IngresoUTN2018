@@ -1,28 +1,46 @@
 function Mostrar()
 {
-    var pares=1;
-    var cantPar;
-    var num=parseInt(prompt("Ingrese un numero: "));
+    var num;
+    var contPar=0;
+    var i;
 
+    num=parseInt(prompt("Ingrese un numero: "));
 
-    for(i=0;i==num ;i++)
+    for(i=1;i<=num;i++)
     {
-        
-
-        if(num%2==1)
+        if(i%2==0)
         {
-            cantPar++;
-            continue;
+            contPar++;
+            console.log(i);
         }
-
-        
-
-
 
     }
 
-   console.log("los numeros pares son: " +pares);
-   console.log("La cantidad de numeros pares es: " +cantPar);
+    console.log("Se registro " +contPar+ " numero pares.");
+
+    //tmb se puede hacer con un continue q lo q hara es si sale algun numero impar volvera al for a incrementar
+    //en caso de q sea par, no entrara al if y toara el registro.
+
+    // var num
+    //var num;
+    //var contPar=0;
+    //var i;
+
+    //num=parseInt(prompt("Ingrese un numero: "));
+
+    //for(i=1;i<=num;i++)
+    //{
+    //    if(i%2==1)     para que entre al if si es impar
+    //    {
+    //       continue;     al ser impar volvera al for sin ser ejecutadas las lineas de abajo
+    //       
+    //    }
+    //        contPar++;
+    //        console.log(i);
+
+    //}
+
+    //console.log("Se registro " +contPar+ " numero pares.");
 
 
 
