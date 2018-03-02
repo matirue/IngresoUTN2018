@@ -6,53 +6,79 @@ a su opción  y le informaremos si ganó, empató o perdió.
 */
 var eleccionMaquina;
 var ppt;
-
 function comenzar()
 {
     eleccionMaquina=Math.floor(Math.random()*3)+1;
-    console.log(eleccionMaquina);
+    
+    //console.log(eleccionMaquina);
 
-    if(eleccionMaquina==1)
-    {
-        eleccionMaquina="Piedra";
-        console.log(eleccionMaquina);
-    }
-    else if(eleccionMaquina==2)
-    {
-        eleccionMaquina="Papel";
-        console.log(eleccionMaquina);
-    }
-    else
-    {
-        eleccionMaquina="Tijera";
-        console.log(eleccionMaquina);
-    }
-	
+    switch(eleccionMaquina)
+      {
+          case 1:
+            eleccionMaquina="piedra";
+            break;
+
+          case 2:
+            eleccionMaquina="papel";
+            break;
+          case 3:
+            eleccionMaquina="tijera";
+            break;
+      }	
+
 }//FIN DE LA FUNCIÓN
 function piedra()
 {
-    if(eleccionMaquina==1)
+    ppt="piedra";
+
+    if(ppt==eleccionMaquina)
     {
-        alert("emp");
-    }   
-    else if(eleccionMaquina==2)
+        alert("Empate!");
+    }
+    else if(eleccionMaquina=="tijera")
     {
-        alert("gano");
+        alert("Ganaste!");
     }
     else
-    { 
-        alert("perdio")
+    {
+        alert("Perdiste");
     }
 	
 
 }//FIN DE LA FUNCIÓN
 function papel()
 {
+    ppt="papel";
+    if(ppt==eleccionMaquina)
+    {
+        alert("Empate!");
+    }
+    else if(eleccionMaquina=="tijera")
+    {
+        alert("Perdiste!");
+    }
+    else
+    {
+        alert("Ganaste!");
+    }
 
 
 }//FIN DE LA FUNCIÓN
 function tijera()
 {
-	
+    ppt="tijera";
+
+	if(ppt==eleccionMaquina)
+    {
+        alert("Empate!");
+    }
+    else if(eleccionMaquina=="piedra")
+    {
+        alert("Perdista!");
+    }
+    else
+    {
+        alert("Ganaste!");
+    }
 
 }//FIN DE LA FUNCIÓN

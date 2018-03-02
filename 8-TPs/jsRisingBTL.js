@@ -9,5 +9,32 @@ F.	Nacionalidad, “A” para argentinos, “E” para extranjeros, “N” para
  */
 function ComenzarIngreso () 
 {
- 
+    {
+        var edad=parseInt(prompt("Ingrese su edad: ")); 
+    
+        while(edad<18 || edad>90)
+         {
+           edad=parseInt(prompt("Denegado, reingrese edad entre 18 y 90 años."));
+         }
+
+       document.getElementById("Edad").value=edad;
+
+    }
+
+
+    {
+        var sexo=prompt("Ingrese su sexo, 'F' para femenino y 'M' para masculino.").toUpperCase();
+
+          while(!(sexo=='F' || sexo=='M'))
+           {
+              sexo=prompt("Error. Reingrese su sexo, 'F' para femenino y 'M' para masculino. ").toUpperCase();
+           }
+        document.getElementById("Sexo").value=sexo;
+    }
+
+    {
+        var estadoCivil=prompt("Ingrese su estado civil")
+    }
+
+
 }
